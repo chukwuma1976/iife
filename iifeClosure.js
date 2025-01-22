@@ -1,7 +1,7 @@
 const areaOfCircle = (
     function () {
         const pi = Math.PI
-        return (radius) => pi * (radius * radius);
+        return (radius) => pi * (radius ** 2);
     }
 )();
 

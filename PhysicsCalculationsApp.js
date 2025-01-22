@@ -1,5 +1,5 @@
 import { physicsCalculations } from "./iifePhysicsCalculations.js";
-import { questionBank } from "./PhysicsQuestions.js";
+import { questionBank } from "./PhysicsEquations.js";
 import readline from 'node:readline';
 
 const rl = readline.createInterface({

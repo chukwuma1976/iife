@@ -1,5 +1,5 @@
 import { physicsCalculations } from "./iifePhysicsCalculations.js";
-import { questionBank } from "./PhysicsEquations.js";
+import { physicsEquations } from "./PhysicsEquations.js";
 import readline from 'node:readline';
 
 const rl = readline.createInterface({
@@ -7,8 +7,8 @@ const rl = readline.createInterface({
     output: process.stdout,
 });
 
-const choices = questionBank.map(question => `\t${(questionBank.indexOf(question) + 1)}) ${question.calculation}`);
-const ids = questionBank.map(question => question.id);
+const choices = physicsEquations.map(question => `\t${(physicsEquations.indexOf(question) + 1)}) ${question.calculation}`);
+const ids = physicsEquations.map(question => question.id);
 
 function calculate(equation, numbers) {
     switch (equation) {
@@ -44,7 +44,7 @@ while (calculating) {
     printChoices();
     const choice = await askQuestion(`Type a number to select an equation: `);
     if (!ids.includes(choice)) break;
-    const physicsQuestion = questionBank.find(question => question.id === choice);
+    const physicsQuestion = physicsEquations.find(question => question.id === choice);
     console.log(physicsQuestion.calculation);
 
     for (const entry of physicsQuestion.entries) {

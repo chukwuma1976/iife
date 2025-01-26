@@ -1,4 +1,4 @@
-export const questionBank = [
+export const physicsEquations = [
     {
         id: '1',
         calculation: "Velocity (V = distance/time)",
